@@ -1,0 +1,33 @@
+{
+  "frontend": [
+    {
+      "id": "invoicex",
+      "title": "InvoiceX",
+      "description": "A web-based invoicing tool with PDF export and client tracking.",
+      "imageUrl": "https://picsum.photos/seed/invoicex/600/400",
+      "techStack": ["React", "CSS", "JavaScript"],
+      "link": "#"
+    },
+    {
+      "id": "portfolio",
+      "title": "Personal Portfolio",
+      "description": "A modern and responsive portfolio showcasing my work.",
+      "imageUrl": "https://picsum.photos/seed/portfolio/600/400",
+      "techStack": ["React", "CSS"],
+      "link": "#"
+    }
+  ],
+  "backend": [
+    {
+      "id": "api",
+      "title": "Task API",
+      "description": "A RESTful API to manage tasks with authentication and CRUD features.",
+      "imageUrl": "https://picsum.photos/seed/api/600/400",
+      "techStack": ["Node.js", "Express", "MongoDB"],
+      "link": "#"
+    }
+  ],
+  "agenticAI": [],
+  "web3": [],
+  "nativeApp": []
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "cover": "https://picsum.photos/seed/book1/300/400"
+  },
+  {
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "cover": "https://picsum.photos/seed/book2/300/400"
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "cover": "https://picsum.photos/seed/book3/300/400"
+  }
+]

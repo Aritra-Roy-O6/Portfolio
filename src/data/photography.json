@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Mountain Sunrise",
+    "imageUrl": "https://picsum.photos/seed/photo1/800/600"
+  },
+  {
+    "title": "City Nights",
+    "imageUrl": "https://picsum.photos/seed/photo2/800/600"
+  },
+  {
+    "title": "Desert Dunes",
+    "imageUrl": "https://picsum.photos/seed/photo3/800/600"
+  }
+]
