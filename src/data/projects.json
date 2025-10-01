@@ -17,17 +17,15 @@
       "link": "#"
     }
   ],
-  "backend": [
+  "fullstack": [
     {
-      "id": "api",
-      "title": "Task API",
-      "description": "A RESTful API to manage tasks with authentication and CRUD features.",
+      "id": "nagarseva",
+      "title": "NagarSeva",
+      "description": "will update soon",
       "imageUrl": "https://picsum.photos/seed/api/600/400",
-      "techStack": ["Node.js", "Express", "MongoDB"],
+      "techStack": ["Node.js", "Express", "PostGreSQL","Bootstrap", "React"],
       "link": "#"
     }
   ],
-  "agenticAI": [],
-  "web3": [],
-  "nativeApp": []
+  "agenticAI": []
 }
