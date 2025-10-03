@@ -24,30 +24,43 @@ html, body, #root {
 }
 
 /* --- Typography --- */
+.h1-teal.typing-effect {
+    width: 16ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #4fd1c5;
+    animation: typing 2.5s steps(11), blink-caret 0.5s step-end infinite alternate;
+}
+
+.about-glow {
+    position: relative;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: radial-gradient(
+        circle at var(--x) var(--y),
+        #4fd1c5 0%, #4fd1c533 10%, #e4e7eb 30%
+    );
+    transition: background-position 0.1s linear;
+}
+
+.institute-name {
+    font-size: 0.85rem;
+    color: #38b2ac;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #1a1f29 60%, #38b2ac22 100%);
+    padding: 0.2rem 0.5rem;
+    border-left: 4px solid #38b2ac;
+    border-radius: 0;
+    display: inline-block;
+}
 .h1-teal {
     font-size: 1.8rem;
     font-weight: 600;
     color: #4fd1c5;
     overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #4fd1c5; 
-    width: 19ch; 
-    animation: typing 3s steps(19) forwards, blink-caret .75s step-end infinite;
-}
-
-.h1-teal:hover {
-    width: 0ch; 
-    animation: typing 3s steps(19) forwards, blink-caret 1s step-end infinite;
-}
-
-.h2-teal {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #4fd1c5;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.4rem;
-    border-bottom: 1px solid #2d3748;
 }
 .h3-teal{
     font-size: 1.3rem;
@@ -61,7 +74,7 @@ html, body, #root {
 .h2-purple {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #1ea9c2;
+    color: #9862fc;
     margin-bottom: 1rem;
 }
 
@@ -70,6 +83,13 @@ html, body, #root {
     font-weight: 600;
     color: #e42e2e;
     position: relative;
+}
+
+.h2-teal{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1ea9c2;
+    margin-bottom: 0.2rem;
 }
 
 .p-gray {
@@ -84,6 +104,20 @@ html, body, #root {
     line-height: 1.6;
     text-align: justify;
 }
+
+/* --- Floating Project Image --- */
+.floating-project-image {
+    position: fixed;
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid #38b2ac;
+    z-index: 2000;
+    pointer-events: none; /* Allows clicks to pass through */
+    animation: fadeIn 0.3s;
+    border-radius: 4px;
+}
+
 
 /* --- Column 1: Sidebar --- */
 .sidebar {
@@ -342,8 +376,21 @@ html, body, #root {
 
 .photo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem; /* Space between image and title */
+}
+
+.photo-item .photo-title {
+    color: #d0dae6; /* Using p-gray color */
+    font-weight: 500;
 }
 
 .photo-grid img {
@@ -358,14 +405,27 @@ html, body, #root {
     transform: scale(1.05);
 }
 
-.book-covers-row, .book-descriptions-row {
+.book-descriptions-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center the items */
+    flex-wrap: wrap; /* This is the key fix to allow wrapping */
     gap: 1.5rem;
 }
 
-.book-covers-row {
-    margin-bottom: 2rem;
+.book-description-card {
+    flex: 1;
+    min-width: 200px; /* Give a minimum width to each card */
+    max-width: 250px; /* And a maximum width */
+    background-color: #2d3748;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-description-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .book-cover {
@@ -376,13 +436,6 @@ html, body, #root {
     border-radius: 0; 
 }
 
-.book-description-card {
-    flex: 1;
-    background-color: #2d3748;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 0; 
-}
 
 /* --- Custom Scrollbar Styles --- */
 .scrollable-content::-webkit-scrollbar, .sidebar::-webkit-scrollbar {
@@ -420,12 +473,74 @@ html, body, #root {
 
 .modal-content {
     background-color: #000000;
-    width: 60%;
-    max-width: 800px;
     border: 3px solid #38b2ac;
     position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     animation: scaleUp 0.4s ease;
+}
+
+/* Fixed and responsive modal size */
+.fixed-modal {
+    width: 600px;
+    max-width: 70vw;
+    min-width: 320px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 12px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: #000000;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: #38b2ac;
+    border: 3px solid #000000;
+    border-radius: 0;
+}
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background-color: #4fd1c5;
+}
+
+.modal-description {
+    margin-bottom: 1.5rem;
+}
+
+.modal-image-container {
+    position: relative;
+}
+
+.modal-links-row {
+    position: absolute;
+    top: 1rem;
+    left: 1rem; /* Positioned top left */
+    display: flex;
+    gap: 0.75rem;
+}
+
+.modal-project-link, .modal-github-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #38b2ac80;
+    transition: background-color 0.2s;
+    color: #fff;
+    text-decoration: none;
+}
+
+.modal-project-link:hover, .modal-github-link:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-close-button {
@@ -438,6 +553,7 @@ html, body, #root {
     font-size: 2rem;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.2s ease;
+    z-index: 10; /* Ensures it's on top of the image */
 }
 
 .modal-close-button:hover {
@@ -445,14 +561,17 @@ html, body, #root {
     transform: rotate(90deg);
 }
 
-.modal-image {
+.modal-iframe {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 300px; 
+    border: none; 
+    background-color: #fff; 
 }
 
-.modal-body {
-    padding: 2rem;
+/* Aligning the "Tech Stack" h3 to the left */
+.modal-body h3.h3-red {
+    text-align: left;
+    width: 100%;
 }
 
 .modal-tech-stack {
@@ -460,6 +579,7 @@ html, body, #root {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 2rem;
+    justify-content: flex-start; /* Aligns badges to the left */
 }
 
 .tech-badge {
@@ -469,34 +589,53 @@ html, body, #root {
     font-size: 0.9rem;
 }
 
-.modal-project-link {
-    display: inline-block;
-    background-color: #38b2ac;
-    color: #000;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.2s;
+.project-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
-.modal-project-link:hover {
-    background-color: #4fd1c5;
+.tech-badge-preview {
+    background-color: #2d3748;
+    color: #a0aec0;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+
+/* --- Book Modal Styles --- */
+.modal-book-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+.modal-book-cover {
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.modal-book-details {
+    text-align: left;
+}
+.modal-book-details .p-light-gray {
+    text-align: left;
 }
 
 /* ================================================================================= */
 /* --- NEW: Education Section Styles --- */
 /* ================================================================================= */
 
-/* The main container for the timeline. */
 .timeline-container {
     position: relative;
     width: 100%;
-    max-width: 900px; /* Adjust as needed */
+    max-width: 900px;
     margin: 2rem auto;
     padding: 1rem 0;
 }
-
-/* The central vertical line of the timeline. */
 .timeline-container::before {
     content: '';
     position: absolute;
@@ -504,18 +643,14 @@ html, body, #root {
     bottom: 0;
     left: 50%;
     width: 2px;
-    margin-left: -1px; /* Center the line */
-    background-color: #2d3748; /* Dark gray line */
+    margin-left: -1px;
+    background-color: #2d3748;
 }
-
-/* Each individual item or "stop" in the timeline. */
 .timeline-item {
     padding: 10px 40px;
     position: relative;
     width: 50%;
 }
-
-/* The dot on the central line for each item. */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -523,65 +658,49 @@ html, body, #root {
     height: 16px;
     top: 24px;
     background-color: #000;
-    border: 3px solid #38b2ac; /* Teal border */
+    border: 3px solid #38b2ac;
     border-radius: 50%;
     z-index: 1;
 }
-
-/* Position ODD items (1st, 3rd, etc.) on the LEFT side. */
 .timeline-item:nth-child(odd) {
     left: 0;
     text-align: right;
 }
-
-/* Position EVEN items (2nd, 4th, etc.) on the RIGHT side. */
 .timeline-item:nth-child(even) {
     left: 50%;
     text-align: left;
 }
-
-/* Position the dot for ODD items on the RIGHT of the item box. */
 .timeline-item:nth-child(odd)::after {
-    right: -8px; /* (dot width / 2) */
+    right: -8px;
 }
-
-/* Position the dot for EVEN items on the LEFT of the item box. */
 .timeline-item:nth-child(even)::after {
-    left: -8px; /* (dot width / 2) */
+    left: -8px;
 }
-
-/* The content box for each timeline item. */
 .timeline-content {
     padding: 15px 20px;
-    background-color: #1a1f29; /* Dark blue-gray background */
+    background-color: #1a1f29;
     position: relative;
     border-radius: 0;
     transition: box-shadow 0.3s ease-in-out;
 }
-
-/* The teal light glow effect on hover. */
 .timeline-item:hover .timeline-content {
     box-shadow: 0 0 20px 3px rgba(79, 209, 197, 0.25);
 }
-
-/* Smaller text styling within the content box. */
 .timeline-content h3 {
     margin-top: 0;
-    font-size: 1rem; /* Slightly smaller title */
+    font-size: 1rem;
     color: #e42e2e;
 }
-
 .timeline-content .timeline-date {
-    font-size: 0.8rem; /* Smaller date text */
+    font-size: 0.8rem;
     font-style: italic;
     font-weight: bold;
     color: #d0dae6;
     margin-bottom: 0.5rem;
 }
-
 .timeline-content p {
     margin: 0;
-    font-size: 0.85rem; /* Smaller paragraph text */
+    font-size: 0.85rem;
     line-height: 1.5;
     color: #e4e7eb;
 }
@@ -597,13 +716,32 @@ html, body, #root {
     background-color: #1a1f29;
     padding: 1rem;
     border-left: 4px solid #9f7aea;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-/* --- Keyframe Animations --- */
 
-/* For h1 typewriter effect */
+.certificates-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-certificate-image {
+    width: 100%;
+    object-fit: contain;
+    flex-shrink: 1;
+    min-height: 0;
+    margin-bottom: 1rem;
+}
+
+.modal-certificate-details {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* --- Keyframe Animations --- */
 @keyframes typing {
     from { width: 0; }
-    to { width: 16ch; }
+    to { width: 19ch; }
 }
 
 @keyframes blink-caret {
@@ -611,10 +749,9 @@ html, body, #root {
     50% { border-color: #4fd1c5; }
 }
 
-/* For modal animations */
 @keyframes fadeIn {
-    from { background-color: rgba(0, 0, 0, 0); }
-    to { background-color: rgba(0, 0, 0, 0.85); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes scaleUp {
@@ -626,14 +763,14 @@ html, body, #root {
 /* --- NEW: MOBILE NAVIGATION & MEDIA QUERIES --- */
 /* ================================================================================= */
 
-.mobile-nav { display: none; } /* Hidden on desktop */
+.mobile-nav { display: none; }
 .ai-chat-close-button { display: none; }
 
 @media (max-width: 1024px) {
+    .floating-project-image { display: none; } /* Hide floating image on mobile */
     html, body, #root { overflow: auto; }
     .app-layout { display: block; height: auto; border: none; }
 
-    /* --- Mobile Nav Bar --- */
     .mobile-nav {
         display: flex;
         justify-content: space-between;
@@ -651,13 +788,11 @@ html, body, #root {
     .mobile-nav-button { background: none; border: none; color: #4fd1c5; cursor: pointer; padding: 0.5rem; }
     .mobile-nav-title { color: #fff; font-weight: 600; }
     
-    /* --- Main Content Padding --- */
     .middle-column {
         width: 100%;
-        padding-top: 60px; /* Space for fixed nav */
+        padding-top: 60px;
     }
 
-    /* --- Sidebar for Mobile --- */
     .sidebar {
         position: fixed;
         left: 0;
@@ -672,7 +807,6 @@ html, body, #root {
         transform: translateX(0);
     }
     
-    /* --- AI Chat for Mobile --- */
     .ai-chat-section {
         position: fixed;
         right: 0;
@@ -682,7 +816,7 @@ html, body, #root {
         z-index: 2000;
         transform: translateX(100%);
         border-left: 1px solid #38b2ac;
-        min-width: 280px; /* Override min-width */
+        min-width: 280px;
     }
     .ai-chat-section.mobile-visible {
         transform: translateX(0);
@@ -704,7 +838,6 @@ html, body, #root {
     }
     .ai-chat-container { margin-top: 0.5rem; }
 
-    /* --- Header Adjustments --- */
     .header-section {
         flex-direction: column-reverse;
         gap: 1.5rem;
@@ -715,41 +848,50 @@ html, body, #root {
     }
     .h1-teal {
         font-size: 1.5rem;
-        /* Adjust typewriter width for new font size */
         width: 19ch;
         margin: 0 auto;
     }
 }
 
-@media (max-width: 480px) {
-    .h1-teal { font-size: 1.3rem; }
-    .h2-purple { font-size: 1.3rem; }
-    .profile-picture { width: 120px; height: 120px; border-radius: 50%; }
-    .header-section, .scrollable-content { padding: 1rem; }
-    .book-cover { width: 120px; height: 180px; }
-}
-
 @media screen and (max-width: 768px) {
-    /* Move the central line to the left. */
     .timeline-container::before {
         left: 15px;
     }
-
-    /* Make all items full-width and position them relative to the new line. */
     .timeline-item {
         width: 100%;
         padding-left: 50px;
         padding-right: 15px;
-        text-align: left; /* Align all text to the left */
+        text-align: left;
     }
-
-    /* Reposition all items to the left side. */
     .timeline-item:nth-child(even) {
         left: 0;
     }
-    
-    /* Move all dots to the new line position. */
     .timeline-item::after {
-        left: 7px; /* (line position - dot width / 2) */
+        left: 7px;
     }
 }
+@media (max-width: 600px) {
+    .fixed-modal {
+        width: 95vw;
+        min-width: 0;
+        max-height: 90vh;
+    }
+    .modal-body {
+        padding: 1rem;
+    }
+    .modal-iframe {
+        height: 180px;
+    }
+    .modal-book-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .modal-book-details {
+        text-align: center;
+    }
+    .modal-book-details .p-light-gray {
+       text-align: center;
+    }
+}
+

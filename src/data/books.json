@@ -1,17 +1,50 @@
 [
   {
-    "title": "Clean Code",
-    "author": "Robert C. Martin",
-    "cover": "https://picsum.photos/seed/book1/300/400"
+    "title": "The Hard Thing About Hard Things",
+    "author": "Ben Horowitz",
+    "cover": "https://m.media-amazon.com/images/I/810u9MkT3SL.jpg",
+    "description": "Thanks to the legend Ben Horowitz for allowing us to live his life in a third person POV. This book is like a third person experience in running one of the biggest ventures in Palo Alto. I know my experiences will be very different from what Mr Horowitz experienced but, I know I will recall the paragraphs from this book when I face struggles in my career."
   },
   {
-    "title": "The Pragmatic Programmer",
-    "author": "Andrew Hunt, David Thomas",
-    "cover": "https://picsum.photos/seed/book2/300/400"
+    "title": "Crime And Punishment",
+    "author": "Fyodor Dostoevsky",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkTTt8k4UtutYY2HO75AB2V_tstMC-W39Dig&s",
+    "description": "If depth is what one searches in characters of a book, this is the one. The complexities of human psyche is so facinating and Dostoevsky is The Greatest in portraying human psyche. This book is probably the most complex read yet one of the most entertaining."
+  },
+  {
+    "title": "Oitihashik Kahini Somogro",
+    "author": "Saradindoo Bandhopadhay",
+    "cover": "https://m.media-amazon.com/images/I/31rGCgRK0iL._UF1000,1000_QL80_.jpg",
+    "description": "Dates in the collection of these stories are long bygone. But the magical pen of Saradindoo Bandhopadhay makes us live in those stories. The stories don't feel like a random collection, it so well knit that you feel you're an immortal living through the Indian histories of Rajputs and Rulers for centuries. The depth in each character draws me to this book again and again."
   },
   {
     "title": "Atomic Habits",
     "author": "James Clear",
-    "cover": "https://picsum.photos/seed/book3/300/400"
+    "cover": "https://images-na.ssl-images-amazon.com/images/I/51-nXsSRfZL._SX329_BO1,204,203,200_.jpg",
+    "description": "I normally don't read a lot of cliche self help books but this one actually helps, I started implementing it's paragraphs in my life slowly and it improved my effieciency so much that it's almost unbelieveable. This book has actually made a difference in my day to day life after my struggling highschool years."
+  },
+  {
+    "title": "Pather Panchali",
+    "author": "Bibhutibhushan Bandyopadhyay",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/7/77/Pather_panchali_poster_in_color_1.jpg",
+    "description": "This is a book which watered my eyes. The Bandhopadhyays of Bengal are the according to me are podium finishers in the World when it comes to creating depth in characters. Bibhutibhusan is the Godfather of that clan. Inspiration to one of the greatest films ever produced, this book teaches life, love, passion, ambition. And obviously, loss."
+  },
+  {
+    "title": "Vinland Saga",
+    "author": "Makoto Yukimura",
+    "cover": "https://m.media-amazon.com/images/I/91+Qs9DaFZL.jpg",
+    "description": "I watched the anime, I read the manga. And after having a long list of animes added to my list, I can say Vinland Saga is by far the greatest manga ever written. This might tick off a lot of manga lovers but it's the absolute fact. The teachings of this book is what everyone- Leaders, workers, common men and women- all should abide by in today's volatile world to actually bring world peace."
+  },
+  {
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "cover": "https://m.media-amazon.com/images/I/81DFDGzHZqL.jpg",
+    "description": "We had a subject in our second semester called Ethics and Human Value. This is where this subject itself started. The great emperor of Rome left his personal diary for us common men to read. It contains so much morals, we might only need a fraction of it in our lives to be a saint in this day and age."
+  },
+  {
+    "title": "Mahabharata",
+    "author": "Rishi Vyasa",
+    "cover": "https://m.media-amazon.com/images/I/71QLqMw+dwL._UF1000,1000_QL80_.jpg",
+    "description": "The OG of all writings. The book which is a massive summary of everything that is possible. I believe if a person can read and truely understand all of Mahabharata he will not need any other self help book in his life. I covers all of life."
   }
 ]

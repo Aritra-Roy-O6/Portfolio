@@ -1,31 +1,90 @@
 {
   "frontend": [
     {
-      "id": "invoicex",
-      "title": "InvoiceX",
-      "description": "A web-based invoicing tool with PDF export and client tracking.",
-      "imageUrl": "https://picsum.photos/seed/invoicex/600/400",
-      "techStack": ["React", "CSS", "JavaScript"],
-      "link": "#"
+      "id": "sololevelling",
+      "title": "Solo Levelling hype page",
+      "description": "An anime watcher's attempt to glazing Solo Levelling. An inspiration from awwwards winning site- Zentry.com",
+      "imageUrl": "../public/sololevelling.png",
+      "techStack": ["React", "CSS", "JavaScript","GSAP","Vite"],
+      "link": "https://solo-levelling-lp.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/solo-levelling-hype"
+    },
+    {
+      "id": "reactioncargame",
+      "title": "Reaction Speed Car Game",
+      "description": "Made a reaction speed testing game with a fun LA neon car driving interface for Outlier's codecircuit frontend hackathon which got shortlisted for the finals.",
+      "imageUrl": "../public/reaction.PNG",
+      "techStack": ["React", "CSS", "TypeScript"],
+      "link": "https://reaction-car-game.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/reaction-speed-car-game"
+    },
+    {
+       "id": "toonycam",
+      "title": "ToonyCam",
+      "description": "A fun project to view the world in cartoon format. Learned p5.js, which didn't provide the best results, so learned some three.js basics to improve the output",
+      "imageUrl": "../public/toony.PNG",
+      "techStack": ["React", "CSS", "three.js","p5.js","Javasrcipt","vite"],
+      "link": "https://toony-cam.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/toonycam"
+    },
+    {
+      "id": "newsletterengine",
+      "title": "Newsletter Engine",
+      "description": "Interactive drag and drop newsletter builder for Outlier's codecircuit frontend hackathon. Not perfect but I like the aesthetics of it",
+      "imageUrl": "../public/eng.PNG",
+      "techStack": ["React", "CSS", "TypeScript"],
+      "link": "https://the-newsletter-engine.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/newsletter-engine"
     },
     {
       "id": "portfolio",
-      "title": "Personal Portfolio",
-      "description": "A modern and responsive portfolio showcasing my work.",
-      "imageUrl": "https://picsum.photos/seed/portfolio/600/400",
-      "techStack": ["React", "CSS"],
-      "link": "#"
+      "title": "This portfolio",
+      "description": "This portfolio. Hope you like it.",
+      "imageUrl": "../public/port.PNG",
+      "techStack": ["React", "CSS", "Vite"],
+      "link": "#",
+      "github": "https://github.com/Aritra-Roy-O6/my-portfolio"
     }
+
   ],
   "fullstack": [
     {
       "id": "nagarseva",
       "title": "NagarSeva",
-      "description": "will update soon",
-      "imageUrl": "https://picsum.photos/seed/api/600/400",
-      "techStack": ["Node.js", "Express", "PostGreSQL","Bootstrap", "React"],
-      "link": "#"
+      "description": "The details to login as an admin can be found in the README. NagarSeva is my and my team's project for SIH'25. The outcome was not in our favour but we had fun building it anyways. I developed the admin and stateadmin dashboards, along with the server and the database. The citizen side application was developed by my teammate. It's my first complete end to end full fleged application. ",
+      "imageUrl": "../public/nagar.PNG",
+      "techStack": ["Node.js", "Express", "PostGreSQL","React","Bootstrap", "React-native","Render-db and server deployment","vite","Expo"],
+      "link": "https://nagar-seva-1-jet.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/nagarseva"
+    },
+    {
+      "id": "spontrip",
+      "title": "SponTrip",
+      "description": "A pwa for AI Trip planning.",
+      "imageUrl": "../public/spon.PNG",
+      "techStack": ["Node.js", "Firebase", "Bootstrap","React","Firestore DB"],
+      "link": "",
+      "github": "https://github.com/Aritra-Roy-O6/spontrip"
+    },
+    {
+      "id": "medisight",
+      "title": "MediSight-Docinator",
+      "description": "A pwa for disease detection, conversational Akinator style AI, Major disease predictor MLs and doctor appointment booking. This was our MetaMorph'25 finals project, I developed the UI and backend and integrted the models with the FrontEnd. ML models were trained by my teammate.",
+      "imageUrl": "../public/medi.PNG",
+      "techStack": ["Node.js", "Firebase", "CSS","React","Firestore DB","FlaskAPI"],
+      "link": "https://medi-sight-flame.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/MediSight"
     }
+
   ],
-  "agenticAI": []
+  "agenticAI": [
+    {
+      "id": "careerbot",
+      "title": "My Career agent",
+      "description":"A agentic chatbot hosted on huggingface spaces trained on my linkedIn and instructions. I will act as me and answer your queries related to me. Big ups to Ed Donner for his amazing course on Agentic AI where I made this in the first week. You can talk to it in the chat section of this website.",
+      "techStack": ["Python","GeminiAPI","GroqAPI","Multi-LLM agentic system","HugginFace"],
+      "link": "https://aroyzz-o6-career-chatbot.hf.space",
+      "github": "https://github.com/Aritra-Roy-O6/career-agent-bot"
+    }
+  ]
 }

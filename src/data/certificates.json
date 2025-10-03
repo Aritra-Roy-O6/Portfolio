@@ -1,0 +1,17 @@
+[
+  {
+    "id": "UC-71282091-06e9-420d-ae01-46e8629d5d20",
+    "title": "The Complete Full-Stack Web Development Bootcamp",
+    "issuer": "Angela Yu",
+    "date": "2025",
+    "imageUrl": "../public/udemyfullstackcert.jpg"
+  },
+  {
+    "id": "not mentioned",
+    "title": "The Generative AI Mastery Workshop",
+    "issuer": "NxtWave & OpenAI Academy",
+    "date": "2025",
+    "imageUrl": "../public/nxtwaveopenAIcert.png"
+  }
+
+]

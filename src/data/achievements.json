@@ -1,10 +1,22 @@
 [
   {
-    "title": "First Place - University Hackathon 2024",
-    "description": "Developed a real-time collaborative coding application that won the top prize for innovation and technical execution."
+    "title": "First Place - BugHunt'24 @RCCIIT",
+    "description": "BugHunt is a RCCIIT event where we have to identify and point out bugs in a code snippet in a mcq format, more important than the win is the fact that I got to learn code DSA concepts and real world bugs that disrupts code."
   },
   {
-    "title": "Open Source Contributor",
-    "description": "Successfully merged multiple pull requests into a popular open-source UI library, improving accessibility and adding new features."
+    "title": "Finalists - Cipher3331 Srijan'25 @JadavpurUniversity",
+    "description": "Had my first big event experience at cipher3331 at JU. Didn't win but learned a lott about encryption and hacking through the prelims and the finals of one of the biggest cybersec event of West Bengal."
+  },
+  {
+    "title": "Finalists - AceTheCase Srijan'25 @JadavpurUniversity",
+    "description": "Strategy, planning and presentation led us to the finals and a top 5 finish at the event. Crushed stage fear and perfected pitching."
+  },
+  {
+    "title": "Finalists - Outlier CodeCircuit Hackathon'24",
+    "description": "A Global frontend and UI/UX hackathon which propelled me to learn basic typescript which I use in my projects now and indulged in two creative projects which got shortlisted in the finals. You can check those out in the projects section."
+  },
+  {
+    "title": "Finalists - GNIT's MetaMorph'25",
+    "description": "My first in person 36 hours hackathon where me and my team qualified to the finals after an online judgement round. Made an amazing project, learned FlaskAPI and ML model integration, connected with a few amazing seniors and mentor and learned from the judges."
   }
 ]
