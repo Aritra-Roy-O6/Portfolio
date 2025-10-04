@@ -111,7 +111,7 @@ const About = () => {
                 onMouseMove={handleMouseMove}
                 onTouchMove={(e) => handleMouseMove(e.touches[0])}
             >
-                A curious and a creative thinker, always ready to take on new challenges. Currently exploring the world of AI and building immersive web experiences. I am a dedicated and enthusiastic developer with a strong foundation in web technologies. My journey in the world of programming began with a curiosity to understand how things work, and it has since evolved into a passion for creating meaningful and innovative solutions. I am a quick learner, a collaborative team player, a dependable leader and I am always eager to expand my skillset.
+               I am a skilled webdeveloper with strong hold on various technologies and currently learning more to improve my skills. Also developing my skills on Agentic AI systems. I am really passionate over tech and spend my mornings reading tech updates. I also like capturing the streets and lives of people through my lenses (not a pro tho).  Curious and intuitive are two words I relate closely with. My near obsession with understanding comes from an early age when I used to bombard my parents with random questions about nature. My mid teenage was spent understanding human psyche and morals- got into philosophical novels. This has in return helped me work well with people and give good advice. To this day this trait dominates in me as I delve into webtech and AI. I strive to bring positive output to any table I'm a part of. I wish to keep learning about things that interest me as long as I can. 
             </p>
         </div>
     );
