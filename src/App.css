@@ -26,11 +26,11 @@ html, body, #root {
 }
 
 .h1-teal.typing-effect {
-    width: 15ch;
+    width: 16ch;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #4fd1c5;
-    animation: typing 3s steps(9), blink-caret 0.5s step-end infinite alternate;
+    animation: typing 3s steps(10), blink-caret 0.5s step-end infinite alternate;
 }
 
 .about-glow {
