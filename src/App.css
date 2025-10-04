@@ -1,22 +1,23 @@
-/* --- Global & Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;700;900&display=swap');
+
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
 
 html, body, #root {
     height: 100%;
     overflow: hidden; 
     background-color: #000;
     color: #fff;
-    font-family: 'Orbitron', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: 'Saira', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* --- Main Layout Container --- */
 .app-layout {
     display: flex;
     height: 100vh;
@@ -24,13 +25,12 @@ html, body, #root {
     border: 1px solid #38b2ac;
 }
 
-/* --- Typography --- */
 .h1-teal.typing-effect {
-    width: 16ch;
+    width: 15ch;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #4fd1c5;
-    animation: typing 2.5s steps(11), blink-caret 0.5s step-end infinite alternate;
+    animation: typing 3s steps(9), blink-caret 0.5s step-end infinite alternate;
 }
 
 .about-glow {
@@ -106,7 +106,6 @@ html, body, #root {
     text-align: justify;
 }
 
-/* --- Floating Project Image --- */
 .floating-project-image {
     position: fixed;
     width: 250px;
@@ -114,13 +113,11 @@ html, body, #root {
     object-fit: cover;
     border: 2px solid #38b2ac;
     z-index: 2000;
-    pointer-events: none; /* Allows clicks to pass through */
+    pointer-events: none; 
     animation: fadeIn 0.3s;
     border-radius: 4px;
 }
 
-
-/* --- Column 1: Sidebar --- */
 .sidebar {
     width: 15%;
     min-width: 200px;
@@ -224,7 +221,7 @@ html, body, #root {
     padding: 0.4rem 0.6rem;
     font-size: 0.9rem;
 }
-/* --- Custom Scrollbar Styles for Sidebar --- */
+
 .sidebar ul::-webkit-scrollbar {
   width: 1px;
 }
@@ -235,14 +232,13 @@ html, body, #root {
 
 .sidebar ul::-webkit-scrollbar-thumb {
   background-color: #000000;
-  border-radius: 0; /* Sharp corners */
+  border-radius: 0; 
 }
 
 .sidebar ul::-webkit-scrollbar-thumb:hover {
   background-color: #000000;
 }
 
-/* --- Column 2: Middle Column --- */
 .middle-column {
     width: 65%;
     display: flex;
@@ -289,7 +285,6 @@ html, body, #root {
     padding: 1.5rem;
 }
 
-/* --- Column 3: AI Chat --- */
 .ai-chat-section {
     width: 35%;
     min-width: 250px;
@@ -314,7 +309,6 @@ html, body, #root {
     border: none;
 }
 
-/* --- Content Sections --- */
 .projects-container, .achievements-list {
     display: flex;
     flex-direction: column;
@@ -336,7 +330,6 @@ html, body, #root {
     border-left: 4px solid #f56565;
 }
 
-
 .project-card, .achievements-list li {
     background-color: #1a1f29;
     padding: 1rem;
@@ -348,7 +341,6 @@ html, body, #root {
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 
 .achievements-list {
     list-style: none;
@@ -386,11 +378,11 @@ html, body, #root {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 0.75rem; /* Space between image and title */
+    gap: 0.75rem; 
 }
 
 .photo-item .photo-title {
-    color: #d0dae6; /* Using p-gray color */
+    color: #d0dae6; 
     font-weight: 500;
 }
 
@@ -408,15 +400,15 @@ html, body, #root {
 
 .book-descriptions-row {
     display: flex;
-    justify-content: center; /* Center the items */
-    flex-wrap: wrap; /* This is the key fix to allow wrapping */
+    justify-content: center; 
+    flex-wrap: wrap; 
     gap: 1.5rem;
 }
 
 .book-description-card {
     flex: 1;
-    min-width: 200px; /* Give a minimum width to each card */
-    max-width: 250px; /* And a maximum width */
+    min-width: 200px; 
+    max-width: 250px; 
     background-color: #2d3748;
     padding: 1rem;
     text-align: center;
@@ -437,8 +429,6 @@ html, body, #root {
     border-radius: 0; 
 }
 
-
-/* --- Custom Scrollbar Styles --- */
 .scrollable-content::-webkit-scrollbar, .sidebar::-webkit-scrollbar {
     width: 12px;
 }
@@ -450,14 +440,13 @@ html, body, #root {
 .scrollable-content::-webkit-scrollbar-thumb, .sidebar::-webkit-scrollbar-thumb {
     background-color: #38b2ac;
     border: 3px solid #000000;
-    border-radius: 0; /* Sharp corners */
+    border-radius: 0; 
 }
 
 .scrollable-content::-webkit-scrollbar-thumb:hover, .sidebar::-webkit-scrollbar-thumb:hover {
     background-color: #4fd1c5;
 }
 
-/* --- Project Modal Styles --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -480,7 +469,6 @@ html, body, #root {
     animation: scaleUp 0.4s ease;
 }
 
-/* Fixed and responsive modal size */
 .fixed-modal {
     width: 600px;
     max-width: 70vw;
@@ -522,7 +510,7 @@ html, body, #root {
 .modal-links-row {
     position: absolute;
     top: 1rem;
-    left: 1rem; /* Positioned top left */
+    left: 1rem; 
     display: flex;
     gap: 0.75rem;
 }
@@ -554,7 +542,7 @@ html, body, #root {
     font-size: 2rem;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.2s ease;
-    z-index: 10; /* Ensures it's on top of the image */
+    z-index: 10; 
 }
 
 .modal-close-button:hover {
@@ -569,7 +557,6 @@ html, body, #root {
     background-color: #fff; 
 }
 
-/* Aligning the "Tech Stack" h3 to the left */
 .modal-body h3.h3-red {
     text-align: left;
     width: 100%;
@@ -580,7 +567,7 @@ html, body, #root {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 2rem;
-    justify-content: flex-start; /* Aligns badges to the left */
+    justify-content: flex-start; 
 }
 
 .tech-badge {
@@ -605,8 +592,6 @@ html, body, #root {
     font-weight: 500;
 }
 
-
-/* --- Book Modal Styles --- */
 .modal-book-content {
     display: flex;
     align-items: center;
@@ -625,10 +610,6 @@ html, body, #root {
 .modal-book-details .p-light-gray {
     text-align: left;
 }
-
-/* ================================================================================= */
-/* --- NEW: Education Section Styles --- */
-/* ================================================================================= */
 
 .timeline-container {
     position: relative;
@@ -739,7 +720,27 @@ html, body, #root {
     flex-shrink: 0;
 }
 
-/* --- Keyframe Animations --- */
+.iframe-loader {
+    width: 100%;
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1f29;
+    color: #a0aec0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+.modal-iframe {
+    width: 100%;
+    height: 300px; 
+    border: none; 
+    background-color: #1a1f29; 
+    object-fit: cover; 
+    object-position: top; 
+}
+
 @keyframes typing {
     from { width: 0; }
     to { width: 19ch; }
@@ -760,15 +761,11 @@ html, body, #root {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* ================================================================================= */
-/* --- NEW: MOBILE NAVIGATION & MEDIA QUERIES --- */
-/* ================================================================================= */
-
 .mobile-nav { display: none; }
 .ai-chat-close-button { display: none; }
 
 @media (max-width: 1024px) {
-    .floating-project-image { display: none; } /* Hide floating image on mobile */
+    .floating-project-image { display: none; } 
     html, body, #root { overflow: auto; }
     .app-layout { display: block; height: auto; border: none; }
 
@@ -788,7 +785,7 @@ html, body, #root {
     }
     .mobile-nav-button { background: none; border: none; color: #4fd1c5; cursor: pointer; padding: 0.5rem; }
     .mobile-nav-title { color: #fff; font-weight: 600; }
-    
+
     .middle-column {
         width: 100%;
         padding-top: 60px;
@@ -807,7 +804,7 @@ html, body, #root {
     .sidebar.mobile-visible {
         transform: translateX(0);
     }
-    
+
     .ai-chat-section {
         position: fixed;
         right: 0;
@@ -895,4 +892,3 @@ html, body, #root {
        text-align: center;
     }
 }
-

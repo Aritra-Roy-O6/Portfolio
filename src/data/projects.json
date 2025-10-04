@@ -55,7 +55,8 @@
       "imageUrl": "/nagar.PNG",
       "techStack": ["Node.js", "Express", "PostGreSQL","React","Bootstrap", "React-native","Render-db and server deployment","vite","Expo"],
       "link": "https://nagar-seva-1-jet.vercel.app/",
-      "github": "https://github.com/Aritra-Roy-O6/nagarseva"
+      "github": "https://github.com/Aritra-Roy-O6/nagarseva",
+      "iframeBlocked": true
     },
     {
       "id": "medisight",
@@ -73,7 +74,8 @@
       "imageUrl": "/spon.PNG",
       "techStack": ["Node.js", "Firebase", "Bootstrap","React","Firestore DB"],
       "link": "https://spontrip.vercel.app/",
-      "github": "https://github.com/Aritra-Roy-O6/spontrip"
+      "github": "https://github.com/Aritra-Roy-O6/spontrip",
+      "iframeBlocked": true
     }
 
   ],
@@ -88,3 +90,4 @@
     }
   ]
 }
+
