@@ -63,7 +63,7 @@
       "description": "A pwa for AI Trip planning.",
       "imageUrl": "../public/spon.PNG",
       "techStack": ["Node.js", "Firebase", "Bootstrap","React","Firestore DB"],
-      "link": "",
+      "link": "https://spontrip.vercel.app/",
       "github": "https://github.com/Aritra-Roy-O6/spontrip"
     },
     {

@@ -197,8 +197,8 @@ const Photography = () => {
     );
 };
 
-const Books = ({ onBookSelect }) => ( <div> <h2 className="h2-purple scramble-effect">Books</h2> <p className="p-light-gray" style={{ marginBottom: '1.5rem' }}> Some of the reads that have shaped my thinking and perspective. </p> <div className="book-descriptions-row"> {booksData.map((book, index) => ( <div key={index} className="book-description-card" onClick={() => onBookSelect(book)}> <img src={book.cover} alt={`Cover of ${book.title}`} className="book-cover" style={{ marginBottom: '1rem' }} /> <h3 className="h3-red">{book.title}</h3> <p className="p-gray" style={{ fontStyle: 'italic' }}>by {book.author}</p> </div> ))} </div> </div> );
-const Degrees = () => ( <div> <h2 className="h2-purple scramble-effect">Degrees</h2> <div className="timeline-container"> <div className="timeline-item"> <div className="timeline-content"> <h3 className="h3-red scramble-effect">Bachelor's Degree in Computer Science</h3> <p className="p-gray timeline-date">Pursuing</p> <span className="institute-name">RCC Institute of Information Technology, Kolkata</span> <p className="p-light-gray">8.4 YGPA in 1st year.</p> </div> </div> <div className="timeline-item"> <div className="timeline-content"> <h3 className="h3-red scramble-effect">AISSCE</h3> <p className="p-gray timeline-date">2024</p> <span className="institute-name">Asian International School, Howrah</span> <p className="p-light-gray">87.6%. 95 in Mathematics.</p> </div> </div> <div className="timeline-item"> <div className="timeline-content"> <h3 className="h3-red scramble-effect">AISSE</h3> <p className="p-gray timeline-date">2022</p> <span className="institute-name">Asian International School, Howrah</span> <p className="p-light-gray">95.8%. 100 in English, 96 in IT.</p> </div> </div> </div> </div> );
+const Books = ({ onBookSelect }) => ( <div> <h2 className="h2-purple scramble-effect">Books</h2> <p className="p-light-gray" style={{ marginBottom: '1.5rem' }}> Some of the reads that have shaped my thinking and perspective. </p> <div className="book-descriptions-row"> {booksData.map((book, index) => ( <div key={index} className="book-description-card" onClick={() => onBookSelect(book)}> <img src={book.cover} alt={`Cover of ${book.title}`} className="book-cover" style={{ marginBottom: '1rem' }} /> <h3 className="h3-red ">{book.title}</h3> <p className="p-gray" style={{ fontStyle: 'italic' }}>by {book.author}</p> </div> ))} </div> </div> );
+const Degrees = () => ( <div> <h2 className="h2-purple scramble-effect">Degrees</h2> <div className="timeline-container"> <div className="timeline-item"> <div className="timeline-content"> <h3 className="h3-red scramble-effect">B.Tech in CSE</h3> <p className="p-gray timeline-date">Pursuing</p> <span className="institute-name">RCC Institute of Information Technology, Kolkata</span> <p className="p-light-gray">8.4 YGPA in 1st year.</p> </div> </div> <div className="timeline-item"> <div className="timeline-content"> <h3 className="h3-red scramble-effect">AISSCE</h3> <p className="p-gray timeline-date">2024</p> <span className="institute-name">Asian International School, Howrah</span> <p className="p-light-gray">87.6%. 95 in Mathematics.</p> </div> </div> <div className="timeline-item"> <div className="timeline-content"> <h3 className="h3-red scramble-effect">AISSE</h3> <p className="p-gray timeline-date">2022</p> <span className="institute-name">Asian International School, Howrah</span> <p className="p-light-gray">95.8%. 100 in English, 96 in IT.</p> </div> </div> </div> </div> );
 const Certificates = ({ onCertificateSelect }) => ( <div> <h2 className="h2-purple">Certificates</h2> <ul className="certificates-list"> {certificatesData.map(cert => ( <li key={cert.id} onClick={() => onCertificateSelect(cert)}> <h3 className="h3-red scramble-effect">{cert.title}</h3> <p className="p-gray">Issued by {cert.issuer}</p> </li> ))} </ul> </div> );
 
 
@@ -259,14 +259,18 @@ const App = () => {
 
     useEffect(() => {
         const scrambleElements = document.querySelectorAll('.scramble-effect');
+        const handlers = [];
         scrambleElements.forEach((element) => {
             const eventHandler = createEventHandler();
             element.addEventListener('mouseover', eventHandler);
-            // Cleanup function to remove event listener
-            return () => {
-                element.removeEventListener('mouseover', eventHandler);
-            };
+            handlers.push({ element, eventHandler });
         });
+        // Cleanup: remove all attached handlers
+        return () => {
+            handlers.forEach(({ element, eventHandler }) => {
+                element.removeEventListener('mouseover', eventHandler);
+            });
+        };
     }, [activeSection]); // Rerun when section changes to apply to new elements
 
     const handleProjectHover = (imageUrl, event) => {
