@@ -58,15 +58,6 @@
       "github": "https://github.com/Aritra-Roy-O6/nagarseva"
     },
     {
-      "id": "spontrip",
-      "title": "SponTrip",
-      "description": "A pwa for AI Trip planning.",
-      "imageUrl": "/spon.PNG",
-      "techStack": ["Node.js", "Firebase", "Bootstrap","React","Firestore DB"],
-      "link": "https://spontrip.vercel.app/",
-      "github": "https://github.com/Aritra-Roy-O6/spontrip"
-    },
-    {
       "id": "medisight",
       "title": "MediSight-Docinator",
       "description": "A pwa for disease detection, conversational Akinator style AI, Major disease predictor MLs and doctor appointment booking. This was our MetaMorph'25 finals project, I developed the UI and backend and integrted the models with the FrontEnd. ML models were trained by my teammate.",
@@ -74,6 +65,15 @@
       "techStack": ["Node.js", "Firebase", "CSS","React","Firestore DB","FlaskAPI"],
       "link": "https://medi-sight-flame.vercel.app/",
       "github": "https://github.com/Aritra-Roy-O6/MediSight"
+    },
+    {
+      "id": "spontrip",
+      "title": "SponTrip",
+      "description": "A pwa for AI Trip planning.",
+      "imageUrl": "/spon.PNG",
+      "techStack": ["Node.js", "Firebase", "Bootstrap","React","Firestore DB"],
+      "link": "https://spontrip.vercel.app/",
+      "github": "https://github.com/Aritra-Roy-O6/spontrip"
     }
 
   ],
