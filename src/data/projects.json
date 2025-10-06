@@ -42,7 +42,7 @@
       "description": "This portfolio. Hope you like it.",
       "imageUrl": "/port.PNG",
       "techStack": ["React", "CSS", "Vite"],
-      "link": "#",
+      "link": "https://aritraroy.vercel.app/",
       "github": "https://github.com/Aritra-Roy-O6/my-portfolio"
     }
 
